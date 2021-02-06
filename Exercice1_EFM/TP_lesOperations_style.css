@@ -1,0 +1,37 @@
+
+body{
+    text-align: center;
+    background-color: #c4f8fc;
+}
+table{
+    border: 2px groove black;
+    width: 15%;
+    height: 250px;
+    background-image: url(Lamp.jpg);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: center;
+    margin-left: 42%;
+}
+td{
+    text-align: center;
+    color: red;
+    width: 60px;
+    font-size: larger;
+}
+td input{
+    width: 8ch;
+}
+.corrections{
+    width: 10ch;
+}
+#verifie{
+    margin-top: 1%;
+    font-size:medium;
+}
+#aleat{
+    font-size: medium;
+}
+#ok{
+    font-size: medium;
+}

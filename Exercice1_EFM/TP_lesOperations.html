@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Operations Des Eleves</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='TP_lesOperations_style.css'>
+    <script>
+        function alea(x,y)
+        {
+            var x = document.getElementById('a');
+            x.value = Math.floor(Math.random()*100) ;
+            var val1 = x.value;
+            var y = document.getElementById('b');
+            y.value = Math.floor(Math.random()*100) ;
+            var val2 = y.value;
+            return val1 & val2 ;
+        }
+        function Verif()
+        {
+            var s = document.getElementById('sumEleve');
+            var ss = document.getElementById('sousEleve');
+            var m = document.getElementById('multEleve');
+            var d = document.getElementById('divEleve');
+
+            var reg=new RegExp('[0-9]*$','g');
+            if(reg.test(s.value)==false || s.value==""){
+                alert("Le champ (A+B) n'est pas remplie!!!");
+                return;}
+            if(reg.test(ss.value)==false || s.value==""){
+                alert("Le champ (A-B) n'est pas rempli!!!e");
+                return;}
+            if(reg.test(m.value)==false || s.value==""){
+                alert("Le champ (A*B) n'est pas remplie!!!");
+                return;}
+            if(reg.test(d.value)==false || s.value==""){
+                alert("Le champ (A/B) n'est pas remplie!!!");
+                return;}
+            else{alert("good");}
+        }
+        function solution()
+        {
+                var sol1 = document.getElementById('sumCorr');
+                var sol2 = document.getElementById('sousCorr');
+                var sol3 = document.getElementById('multCorr');
+                var sol4 = document.getElementById('divCorr');
+
+                var numa = document.getElementById('a');
+                var numb = document.getElementById('b');
+                
+                sol1.value=parseInt(numa.value + numb.value);
+                sol2.value=numa.value-numb.value;
+                sol3.value=numa.value*numb.value;
+                sol4.value=numa.value/numb.value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Vos données</h1>
+    <p>Cliquez sur le boutton "Aleatoire" pour tirer deux nombres entre 0 et 100</p>
+    <label for="a">A=</label><input type="text" id="a" class="donnees">
+    <label for="b">B=</label><input type="text" id="b" class="donnees">
+    <input type="button" id="aleat" value="Aleatoire" onclick="alea(a,b)">
+
+    <h1>Votre solution</h1>
+        <table>
+            <tr>
+                <td>A+B</td>
+                <td><input type="text" id="sumEleve"></td>
+            </tr>
+            <tr>
+                <td>A-B</td>
+                <td><input type="text" id="sousEleve"></td>
+            </tr>
+            <tr>
+                <td>A*B</td>
+                <td><input type="text" id="multEleve" ></td>
+            </tr>
+            <tr>
+                <td>A/B</td>
+                <td><input type="text" id="divEleve" ></td>
+            </tr>
+            
+        </table>
+    <input type="button" value="Verifier" id="verifie" onclick="Verif()">
+
+    <h1>La correction</h1>
+    <label for="sumCorr">A+B=</label><input type="text" id="sumCorr" class="corrections" disabled>
+    <label for="sousCorr">A-B=</label><input type="text" id="sousCorr" class="corrections" disabled>
+    <label for="multCorr">A*B=</label><input type="text" id="multCorr" class="corrections" disabled>
+    <label for="divCorr">A/B=</label><input type="text" id="divCorr" class="corrections" disabled>
+    <input type="button" id="ok" value="OK" onclick="solution()">
+</body>
+</html>
