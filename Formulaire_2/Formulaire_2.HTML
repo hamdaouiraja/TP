@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire 2</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        
+        body{
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        form{
+            width: 70%;
+            text-align:justify;
+            font-size: 160%;
+        }
+        #nom{
+            margin-left: 7%;
+        }
+        #id{
+            margin-left: 13%;
+        }
+        #age{
+            margin-left: 10.5%;
+        }
+        #password{
+            margin-left: 18.5%;
+        }
+        #password2{
+            margin-left: 7%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form action="" method="">
+        <fieldset>
+            <legend>Personnel informations</legend>
+            <label for="nom">Enter your name</label><input type="text" id="nom"><br>
+            <label for="age">Enter your age</label><input type="text" id="age"><br>
+            <label for="id">Enter your id</label><input type="text" id="id"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Sports</legend>
+            <label>Your favorite sport : </label>
+            <input type="checkbox" name="G1">football
+            <input type="checkbox" name="G1">basketball
+            <input type="checkbox" name="G1">tennis
+        </fieldset>
+        <fieldset>
+            <legend>Notefications</legend>
+            <label>Do you wanna get otefications from us ?</label>
+            <input type="radio" name="G2">YES
+            <input type="radio" name="G2">NO
+        </fieldset>
+        <fieldset>
+            <legend>Country</legend>
+            <label>Choose your country from list</label>
+            <select id="Country1">
+                <option value="0"> </option>
+                <option value="1">America</option>
+                <option value="2">France</option>
+                <option value="3">Spain</option>
+                <option value="4">Morocco</option>
+                <option value="5">Russia</option>
+                <option value="6">Egybt</option>
+                <option value="7">Canada</option>
+            </select>
+        </fieldset>
+        <input type="submit">
+        <input type="reset">
+        </form>
+</body>
+</html>
