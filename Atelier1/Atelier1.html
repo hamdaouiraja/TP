@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Atelier Validation Formulaire</title>
+    <style></style>
+    <script>
+        function AfficherDiv(){
+            var div1 = document.getElementById('d1');
+            var r1 = document.getElementById('r1');
+            var r2 = document.getElementById('r2');
+            if( r1.checked == true )
+            {
+                div1.style.display="block";
+            }
+            if( r2.checked == true )
+            {
+                div1.style.display="none";
+            } 
+        }
+        function verif(){
+            var n=document.getElementById('nom');
+            var p=document.getElementById('pass');
+            var r1 = document.getElementById('r1');
+            var r2 = document.getElementById('r2');
+
+            var Reg=new RegExp('[a-z]$','g');
+            if(n.value == "")
+            {
+                alert("Nom Obligatoire!!!");
+                return;
+            }
+            if(Reg.test(n.value)==false){
+                alert("!!!! Le nom ne doit pas contenir de chifre ou caracteres speciaux ");
+                return;
+            }
+            if(p.value == "")
+            {
+                alert("Password Obligatoire!!!");
+                return;
+            }
+            if( r2.checked == false )
+                {
+                    var val=ville.selectedIndex;
+                    if(val==0){
+                        alert("Veulliez choisir une ville!!!");
+                        return;
+                    }
+                }
+            var info = "Votre nom est : "+n.value;
+            info += "   Votre password est : "+p.value;
+            if( r2.checked == false )
+                {
+                    var val=ville.selectedIndex;
+                    info += "   Votre ville est : "+ville.options[val].text;
+                }
+            confirm(info);
+        }
+    </script>
+</head>
+<body>
+    <form action="" >
+    <label for="nom">Le  Nom</label>
+    <input type="text" id="nom" required><sup>(*)</sup> <br>
+    <label for="pass">Password</label>
+    <input type="password" id="pass" required><sup>(*)</sup><br>
+    <label for="affDiv">Afficher les villes </label>
+    <input type="radio" name="affDiv" id ="r1" onclick="AfficherDiv()"><span>OUI</span>
+    <input type="radio" name="affDiv" id ="r2" onclick="AfficherDiv()"><span>NON</span>
+    <br>
+    <div id="d1">
+        <label for="ville">Choisir une ville </label>
+                    <select id="ville">
+                        <option value="0">selectionez ville</option>
+                        <option value="1">Benni mellal</option>
+                        <option value="2">Tanger</option>
+                        <option value="3">Rabat</option>
+                        <option value="4">Marrakech</option>
+                    </select>
+    </div>
+    <input type="button" class="butt" value="se connecter" onclick="verif()">
+    <input type="reset" class="butt" value="annuler">
+</form>
+</body>
+</html>
