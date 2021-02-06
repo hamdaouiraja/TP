@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Formulaire 1</title>
+    <style>
+        body{
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        form{
+            width: 70%;
+            text-align:justify;
+            font-size: 160%;
+        }
+        #nom{
+            margin-left: 7%;
+        }
+        #prenom{
+            margin-left: 2%;
+        }
+        #age{
+            margin-left: 11.5%;
+        }
+        #password{
+            margin-left: 18.5%;
+        }
+        #password2{
+            margin-left: 7%;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Formulaire</h1>
+        <form action="">
+            <fieldset>
+                <legend>Etape 1</legend>
+                    <label for="nom">Entrez le Nom</label>
+                    <input type="text" id="nom"><br>
+                    <label for="prenom">Entrez le Prenom</label>
+                    <input type="text" id="prenom"><br>
+                    <label for="age">Entrez l age</label>
+                    <input type="text" id="age">
+            </fieldset> 
+            <fieldset>
+                <legend>Etape 2</legend>
+                    <label for="gander"> Entrez votre sex</label>
+                    <input type="radio" name="gander">Male
+                    <input type="radio" name="gander">Female
+            </fieldset> 
+            <fieldset>
+                <legend>Etape 2</legend>
+                    <label for="pays">Choisir Votre Pays</label>
+                    <select id="Pays">
+                        <option value="0">selectionez</option>
+                        <option value="1">Maroc</option>
+                        <option value="2">Algerie</option>
+                        <option value="3">Tunisie</option>
+                        <option value="4">Egybt</option>
+                        <option value="5">France</option>
+                    </select>
+            </fieldset> 
+            <fieldset>
+                <legend>Etape 3</legend>
+                    <label for="password"> Entrez un Password</label>
+                    <input type="password" id="password"><br>
+                    <label for="password2"> Confirmer votre Password</label>
+                    <input type="password" id="password2"><br>
+                    <label for="birthday">Entrez Votre date de naissance</label>
+                    <input type="date" id="birthday">
+            </fieldset>    
+                <hr>
+                <input type="submit">
+                <input type="reset">
+        </form>
+</body>
+</html>
