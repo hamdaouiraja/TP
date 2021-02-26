@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>OBJECT 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        //METHODE 1 :
+        //tableau objet
+        var T=[{nom:"Yassine",age:18},{nom:"Kamal",age:20},{nom:"Khalid",age:15}] 
+        
+        //METHODE 2 :
+        //x represente format json
+        var x={tableau:[{nom:"Yassin",age:18},{nom:"Kamal",age:20},{nom:"Khalid",age:15}] }
+
+    </script>
+</head>
+<body>
+    <script> 
+
+        //METHODE 1 :
+        /*for(i=0;i<=T.length-1;i++){
+            document.write(T[i].nom+ "-- "+T[i].age+"<hr/>");
+        }*/
+
+        //METHODE 2 :
+        x.tableau[0]
+        for(i=0;i<=x.tableau.length-1;i++){
+            document.write("Le Nom : "+x.tableau[i].nom+ " ---- L'age : "+x.tableau[i].age+"<hr/>");
+        }
+    </script>
+</body>
+</html>
