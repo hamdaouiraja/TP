@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>E-mail</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <style>
+      #d1{
+        width: 20%;
+        border: 1px solid red;
+      }
+    </style>
+    <script>
+          function valider(){
+                var mail=document.querySelector("#mail");
+                var d1=document.querySelector("#d1");
+                var x=mail.value;
+                var rg=new RegExp('^[^0-9][a-z0-9]{4,}@[a-z]{3,}\.[a-z]{2,3}$','g');
+                if(x==""){ 
+                    d1.innerHTML="Veuillez entrez un email";
+                    return;
+                 } 
+                 if(rg.test(x)==false){
+                    d1.innerHTML="Email Non Valide !!!";
+                 }else{
+                    d1.innerHTML="Email Valide";
+                 }
+          }
+    </script>
+</head>
+<body>
+    <h1>Exercice Validation Email</h1>
+    <form >
+      <label>Entrez votre Email : </label>
+      <input type="text" id="mail" />
+      <br>
+      <input type="button" value="Verifier" onclick="valider();" />
+      <hr>
+      <div id="d1">Email Valide/Non Valide</div>
+    </form>
+</body>
+</html>
