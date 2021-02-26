@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TP 1 JQuery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='./jquery-3.3.1.min.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Exemple JQuery(SELECTEUR)</h1>
+    </header>
+    <div id="main">
+        <div>DIV 1</div>
+        <ul class="u1">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+        </ul>
+
+    </div>
+    <footer>
+        <script>
+            $(document).ready(
+                function(){
+                    $(".u1").children().each(function(i){
+                        $(this).css("color","red");
+                        $(this).fadeOut(1500);
+                        $(this).fadeIn(1500);
+                    });
+                }
+            );
+        </script>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='./jquery-3.3.1.min.js'></script>
+    <style>
+        .c1{
+            border:5px solid red;
+            width:50%;
+            font-size:100%;}
+        .c2{
+        border:10px double rgb(33, 128, 33);
+        width:50%;
+        font-size:150%;}
+    </style>
+    <script>
+        $(document).ready(
+            function(){
+                $("#div1").click(
+                    function(){
+                        $("#div1").addClass("c1");
+                        $("#div1").html("<h2> Hello DIV 1 </h2");
+                    });
+        });
+        $(document).ready(
+            function(){
+                    $("#div2").click(
+                        function(){
+                            $("#div2").addClass("c2");
+                            $("#div2").html("<h2> Hello DIV 2 </h2");
+                        });
+        });
+    </script>
+   
+</head>
+<body>
+    <div id="div1"> Hello </div>
+    <div id="div2"> Hello </div>
+</body>
+</html>
