@@ -1,0 +1,14 @@
+<head>
+    <script type="text/javascript">
+        function ReplaceText () {
+            var textContainer = document.getElementById ("textContainer");
+            var firstTextNode = textContainer.firstChild;
+            firstTextNode.replaceData (0, 5, "Hi ");
+        }
+    </script>
+</head>
+<body>
+    <div id="textContainer">The first five characters of this text will be replaced.</div>
+    <br /><br />
+    <button onclick="ReplaceText ()">Replace the first five characters of the text above!</button>
+</body>

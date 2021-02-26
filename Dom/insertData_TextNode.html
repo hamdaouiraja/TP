@@ -1,0 +1,14 @@
+<head>
+    <script type="text/javascript">
+        function InsertText () {
+            var textContainer = document.getElementById ("textContainer");
+            var firstTextNode = textContainer.firstChild;
+            firstTextNode.insertData (20, "inserted text ");
+        }
+    </script>
+</head>
+<body>
+    <div id="textContainer">Insert text here : before this</div>
+    <br /><br />
+    <button onclick="InsertText ()">Insert some text into the text above!</button>
+</body>

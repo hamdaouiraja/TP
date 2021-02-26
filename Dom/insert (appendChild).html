@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Insert before</title>
+</head>
+<body>
+<ul id="myList">
+  <li>coffe</li>
+  <li>tea</li>
+  <li>milk</li>
+</ul>
+
+<p>Click the button to add a new element in list</p>
+
+<input type="button" value="clicker" onclick="myFunction()"/> 
+
+<script>
+var b=false;
+function myFunction() {
+    var li = document.createElement("li");       // Create a <li> node
+    var textnode = document.createTextNode("water");  // Create a text node
+    li.appendChild(textnode);                    // Append the text to <li>
+
+    var listUl = document.getElementById("myList");    // Get the <ul> element to insert a new node
+    listUl.appendChild(li);
+}
+</script>
+
+</body>
+</html>
+
