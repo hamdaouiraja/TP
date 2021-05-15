@@ -1,2 +1,2 @@
 # TP
-Les Traveaux Pratiques
+Les Traveaux Pratiques (HTML - CSS - JavaScript)
